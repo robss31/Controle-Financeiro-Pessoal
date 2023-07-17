@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import  ControleFinanceiro from  './ControleFinanceiro'
+import  ControleFin from  './ControleFin'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ControleFinanceiro />
+    <ControleFin />
   </React.StrictMode>,
 )
