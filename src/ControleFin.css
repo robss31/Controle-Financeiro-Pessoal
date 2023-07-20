@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap');
 
 body {
-    background-color: rgb(51, 42, 42);
+    /*background-color: rgb(51, 42, 42);*/
     margin: 30px auto;
     font-family: 'Roboto', sans-serif;
 }
@@ -29,7 +29,7 @@ h1 {
 
 }
 
-img {
+.img {
     display: flex;
     flex-direction: column;
     margin-top: 10px;
@@ -55,11 +55,11 @@ img {
 }
 
 input::placeholder {
-    color: rgb(173, 255, 47);
-    font-size:16px ;
+    color: #fff;
+    font-size: 16px;
 
 }
-
+/*Button entrar*/
 #btn {
     width: 120px;
     height: 40px;
@@ -71,9 +71,6 @@ input::placeholder {
     font-weight: 600;
     color: rgb(173, 255, 47);
     transform: 0.3s;
-
-
-
 }
 
 #btn:hover {
@@ -83,7 +80,7 @@ input::placeholder {
 }
 
 
-                            /* PAGINA 2 - RESSUMO DAS FINANÇAS  */
+/* PAGINA 2 - RESSUMO DAS FINANÇAS  */
 
 
 .container2 {
@@ -97,24 +94,24 @@ input::placeholder {
     margin: 65px auto;
     text-align: center;
     border-radius: 20px;
-
 }
 
-
-#inputconta {
+#inputconta,
+#inputconta1,
+#inputconta2 {
     width: 250px;
-    height: 30px;
-    background-color: rgba(180, 174, 174, 0.3) ;
+    height: 35px;
+    background-color: rgba(180, 174, 174, 0.3);
     margin-bottom: 70px;
     margin-left: 5px;
- 
-
+    color: #fff;
+    font-size: 18px;
 }
-
+/*Button add*/
 #btn1 {
     position: absolute;
     cursor: pointer;
-    padding:7px 20px;
+    padding: 10px 20px;
     margin-top: 2px;
     border-radius: 0 10px 10px 0;
     background: linear-gradient(rgb(93, 221, 135), rgb(50, 48, 51), rgb(93, 221, 135));
@@ -123,93 +120,111 @@ input::placeholder {
     margin-left: 3px;
 }
 
-#btn1:hover{
+#btn1:hover {
     background: linear-gradient(rgb(93, 221, 135), rgb(50, 48, 51), rgb(93, 221, 135));
     border: 2px solid rgb(173, 255, 47);
     color: #fff;
 }
 
-.item{
+/* Informação do cliente na tela*/
+.item {
     display: flex;
+    width: 99%;
     justify-content: space-between;
-    border: 1px solid rgb(53, 80, 14);
-    background:  rgb(133, 128, 128, 0.1) ;
-    margin-top: 10px;
-    margin-left: 10px;
+    border: 1px solid rgb(38, 244, 15);
+    background: rgb(81, 84, 80);
+    margin-left: 5px;
     margin-right: 10px;
+    color: black;
+    margin-top: 5px;
+
 }
 
-.item:hover{
-    background: rgb(67, 64, 64);
+.item:hover {
+    background: rgba(213, 209, 209, 0.5);
+    
 }
-
-.item span{
-    width: 100%;
-    color: white;
+/*Parte interna do span*/
+.item span {
+    width: 98%;
+    color: #fff;
     margin-right: 5px;
-    padding: 10px 15px;
+    padding: 1px 15px;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 3px;
 }
-.item.completo{
+/*Conta Paga*/
+.item.completo {
     display: flex;
+    width: 99%;
     justify-content: space-between;
     margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
     border: none;
     
 }
 
-.item.completo span{
-    width: 100%;
-    color: rgb(126, 129, 128);
-    margin-right: 5px;
-    padding: 10px 15px;
-    background: rgb(29, 28, 28);
-    text-decoration: line-through 1.5px;
+.item.completo span {
+    width: 99%;
+    color: #464f7d;
+    margin-right: -5px;
+    padding: 10px;
+    background: rgb(116, 207, 157);
+    text-decoration: line-through 2.5px;
     opacity: 0.3;
+  
 }
 
-button.del{
-    background:none;
+button.deletar {
+    background: none;
     border: none;
-    color: #4d506e;
-    padding: 15px;
+    color: #f7efec;
+    padding: 10px;
     cursor: pointer;
 }
 
-button.del:hover {
-    background: rgb(210, 5, 5);
+button.deletar:hover {
+    background: rgb(21, 21, 21);
     border: none;
     color: rgb(255, 255, 255);
     padding: 15px;
     cursor: pointer;
 }
 
-.delete{
-    border: 1px solid  rgb(173, 255, 47);
+#img1 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    border: 2px solid rgb(173, 255, 47);
+    border-radius: 50%;
+    margin-left: 50px
+}
+
+.deletarTudo {
+    border: 1px solid rgb(173, 255, 47);
     background: none;
-    color:  rgb(173, 255, 47);
+    color: rgb(173, 255, 47);
     padding: 15px;
     font-weight: bold;
     border-radius: 5px;
     width: 99%;
-    margin-top: 5px;
+    margin-top: 35px;
+    margin-left: 4px;
 }
 
+.deletarTudo:hover {
 
-.delete:hover{
-   
-    background:rgb(167, 4, 4);
+    background: rgb(167, 4, 4);
     color: rgb(252, 246, 246);
     transform: 0.3ms;
-    text-transform:uppercase;
-    
-
+    text-transform: uppercase;
     
 }
+
 @media screen and (max-width: 900px) {
     .container2 {
         width: 60%;
+        height: 100%;
         ;
 
     }
