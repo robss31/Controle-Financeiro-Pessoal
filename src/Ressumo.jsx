@@ -1,15 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './ControleFin.css';
 
 
 
 function Ressumo() {
 
-    const [lista, setLista] = useState([]);
+    const listaStorage = localStorage.getItem('Lista');
+
+    const [lista, setLista] = useState(listaStorage ? JSON.parse(listaStorage) : []);
     const [name, setName] = useState('');
     const [venci, setVenci] = useState('');
     const [valor, setValor,] = useState('');
 
+    useEffect(() => {
+        localStorage.setItem('Lista', JSON.stringify(lista));
+    }, [lista]);
 
     function adicionaItem(e) {
         e.preventDefault();
@@ -32,8 +37,19 @@ function Ressumo() {
         const listaAux = [...lista];
         listaAux[index].isCompleted = !listaAux[index].isCompleted;
         setLista(listaAux);
-
     }
+
+    function deleta(index) {
+        const listaAux = [...lista];
+        listaAux.splice(index, 1);
+        setLista(listaAux);
+    }
+
+    function deletatudo() {
+        setLista([]);
+    }
+
+
 
     return (
         <div className="container2">
@@ -47,6 +63,12 @@ function Ressumo() {
                 <input id="inputconta1" type="text" value={valor} onChange={(e) => { setValor(e.target.value) }} placeholder="  Valor" />
 
                 <button type="submit" id="btn1">add</button>
+
+                <div >
+                    
+                    <p ><span id="recebe" ></span>  </p>
+                   
+                </div>
             </form>
 
 
@@ -68,7 +90,7 @@ function Ressumo() {
                                 <span onClick={() => { clicou(index) }}>{item.data}</span>
                                 <span onClick={() => { clicou(index) }}>{item.custo}</span>
 
-                                <button className="deletar">deletar</button>
+                                <button onClick={() => { deleta(index) }} className="deletar">deletar</button>
 
                             </div>
 
@@ -78,16 +100,14 @@ function Ressumo() {
 
 
             </div>
-
-
-            <button className="deletarTudo">Deletar Todas</button>
-
+            {
+                lista.length > 0 &&
+                <button onClick={() => { deletatudo() }} className="deletarTudo">Deletar Todas</button>
+            }
         </div>
-
-
-
-
     )
+
+
 };
 
 
