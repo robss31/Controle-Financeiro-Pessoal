@@ -15,7 +15,7 @@ body {
     background-color: rgb(20, 25, 23);
     border: 2px solid rgb(173, 255, 47);
     width: 400px;
-    height: 600px;
+    height: 800px;
     font-size: 12px;
     margin: 65px auto;
     text-align: center;
@@ -109,8 +109,21 @@ input::placeholder {
     font-size: 18px;
 }
 
+p{
+    p {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 40px;
+        font-weight: 600;
+        color: rgb(204, 243, 62);
+    
+    }
+   
+}
+
+
 /*Button add*/
-#btn1 {
+#btn1 #send {
     position: absolute;
     cursor: pointer;
     padding: 10px 20px;

@@ -16,6 +16,8 @@ function Ressumo() {
         localStorage.setItem('Lista', JSON.stringify(lista));
     }, [lista]);
 
+
+
     function adicionaItem(e) {
         e.preventDefault();
 
@@ -32,6 +34,7 @@ function Ressumo() {
         document.getElementById('inputconta1');
         document.getElementById('inputconta2');
     }
+
 
     function clicou(index) {
         const listaAux = [...lista];
@@ -66,7 +69,7 @@ function Ressumo() {
 
                 <div >
                     
-                    <p ><span id="recebe" ></span>  </p>
+                    <p ><span id="inputsaldo" >teste</span></p>
                    
                 </div>
             </form>
