@@ -1,39 +1,39 @@
-import react from "react";
+import react, { useState } from "react";
 import './ControleFin.css';
+
+
+include: './Ressumo'
 
 
 
 function ControleFin() {
 
-    const btn = document.querySelector("#send");
 
-    btn.addEventListener("click", function (e) {
-            e.preventDefault();
+    const [valor1, setValor1,] = useState('');
+     
+  
 
-        const inputsal = document.querySelector("#inputsal");
+    const handleChage = (event) => {
+        setValor1(event.target.value);
+    };
 
-        const valor = Number(inputsal.value);
 
-        const converte = valor + 5;
-
-        document.getElementById("saldo").innerHTML = ("Resultado: " + converte.toFixed(2) + " m/s ");
-
-    })
-
+   
     return (
         <div className="container">
             <h1>Controle Financeiro Pessoal</h1>
 
             <img width={300} height={300} src="./img/foto_capa.jpg" alt="" className="img" />
-
+            
             <form action="">
-
-                <input type="text" id="inputsal" placeholder="Digite Sua Receita Mensal" />
-                <p ><span id="saldo" ></span>  </p>
-
+                    
+                <input type="text" value={valor1} onChange={handleChage} placeholder="Digite Sua Receita Mensal" />
+                
+                <h1>saldo = {valor1 -10}</h1>
             </form>
 
-            <button type="submit" id="send" >Entrar</button>
+            <button type="submit"  >Entrar</button>
+
         </div>
     )
 }
