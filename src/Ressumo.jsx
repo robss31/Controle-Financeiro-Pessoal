@@ -68,21 +68,18 @@ function Ressumo() {
         if (!isNaN(parsedInputValue)) {
             setResult(parsedInputValue - valor);
             setInputValue(parsedInputValue - valor);
-           // setInputValue(0);
+           // setInputValue('');
 
            
-            //setResult(result );
 
         } else if ((parsedInputValue)==0){
             setInputValue( setResult);
             setResult(inputValue - valor)
 
-            //const newResult = ( parsedInputValue - valor);
-            //setResult(setInputValue());
-
-        }else{
-
+           
         }
+
+       
     };
 
 
