@@ -91,7 +91,7 @@ input::placeholder {
     background-color: rgb(20, 25, 23);
     border: 2px solid rgb(173, 255, 47);
     width: 170vh;
-    height: 700px;
+    height: 900px;
     font-size: 12px;
     margin: 65px auto;
     text-align: center;
@@ -141,9 +141,9 @@ label {
 }
 
 p {
+    display: block;
     margin-top: 30px;
-    margin-bottom: 30px;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 600;
     color: rgb(204, 243, 62);
 
@@ -251,7 +251,7 @@ button.deletar:hover {
     font-weight: bold;
     border-radius: 5px;
     width: 99%;
-    margin-top: 35px;
+    margin-top: 25px;
     margin-left: 4px;
 }
 
@@ -289,12 +289,16 @@ button.deletar:hover {
         margin-top: -110px;
     }
 
-    .item {
+    .item .item span {
 
         width: 150%;
         margin-left: -60px;
     }
 
+    .deletarTudo{
+        width: 90%;
+        margin-bottom: 5px;
+    }
 
 
 
