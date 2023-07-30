@@ -8,7 +8,7 @@ import './ControleFin.css';
 function Ressumo() {
 
     const listaStorage = localStorage.getItem('Lista');
-    
+
 
     const [lista, setLista] = useState(listaStorage ? JSON.parse(listaStorage) : []);
     const [name, setName] = useState('');
@@ -18,9 +18,9 @@ function Ressumo() {
     const [inputValue, setInputValue] = useState(0);
     const [result, setResult] = useState(0);
     const spanRef = useRef(null);
-    
-    
-    
+
+
+
 
     useEffect(() => {
         localStorage.setItem('Lista', JSON.stringify(lista));
@@ -34,23 +34,23 @@ function Ressumo() {
             alert("Preencha todos os campos");
             return;
         }
-        
-        setLista([...lista, { text: name, data: venci, custo: valor, saldo: result,  teste: inputValue,  isCompleted: false }])
+
+        setLista([...lista, { text: name, data: venci, custo: valor, saldo: result, teste: inputValue, isCompleted: false }])
         setName("");
         setVenci("");
         setValor("");
         setResult("");
         setInputValue(inputValue);
 
-        
-       // setResult(saldo);
+
+        // setResult(saldo);
 
         document.getElementById('inputconta');
         document.getElementById('inputconta1');
         document.getElementById('inputconta2');
         document.getElementById('valorIni');
 
-        
+
     }
 
 
@@ -68,18 +68,18 @@ function Ressumo() {
         if (!isNaN(parsedInputValue)) {
             setResult(parsedInputValue - valor);
             setInputValue(parsedInputValue - valor);
-           // setInputValue('');
+            // setInputValue('');
 
-           
 
-        } else if ((parsedInputValue)==0){
-            setInputValue( setResult);
-            setResult(inputValue - valor)
 
-           
+        } else{
+            //setInputValue(setResult);
+            //setResult(inputValue - valor)
+
+
         }
 
-       
+
     };
 
 
@@ -120,14 +120,14 @@ function Ressumo() {
 
 
                 <div >
-
+                    <p>Saldo: {inputValue}</p>
                     <span ref={spanRef} ></span>
 
                     <input id="valorIni" type="number" value={inputValue} onChange={(e) => { setInputValue(e.target.value) }} placeholder=" Valor Salario" />
 
-                    <p>Saldo: {inputValue}</p>
 
-                    
+
+
 
 
                 </div>
@@ -152,9 +152,9 @@ function Ressumo() {
                                 <span onClick={() => { clicou(index) }}>{item.text}</span>
                                 <span onClick={() => { clicou(index) }}>{item.data}</span>
                                 <span onClick={() => { clicou(index) }}>{item.custo}</span>
-                                <span onClick={() => { clicou(index) }}>{item.saldod}</span>
-                              
-                                
+                                <span onClick={() => { clicou(index) }}>{item.saldo}</span>
+
+
 
                                 <button onClick={() => { deleta(index) }} className="deletar">deletar</button>
 

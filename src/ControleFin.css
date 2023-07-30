@@ -142,7 +142,8 @@ label {
 
 p {
     display: block;
-    margin-top: 30px;
+    margin-top:-30px;
+    margin-left: -720px;
     font-size: 30px;
     font-weight: 600;
     color: rgb(204, 243, 62);
