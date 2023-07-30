@@ -140,7 +140,7 @@ function Ressumo() {
                     lista.length < 1
                         ?
 
-                        <img width={300} height={300} src="./img/foto_capa.jpg" alt="" className="img1" />
+                        <img width={300} height={300} src="./img/lista_capa.jpg" alt="" className="img1" />
                         :
                         lista.map((item, index) => (
 
