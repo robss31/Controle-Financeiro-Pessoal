@@ -15,7 +15,7 @@ function Ressumo() {
     const [venci, setVenci] = useState('');
     const [valor, setValor] = useState('');
     const [spanValue, setSpanValue] = useState(0);
-    const [inputValue, setInputValue] = useState(0);
+    const [inputValue, setInputValue] = useState('');
     const [result, setResult] = useState(0);
     const spanRef = useRef(null);
 
